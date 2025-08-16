@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryForge AI - Transform Documents into Animated Stories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transform-toggle {
+            transition: all 0.3s ease;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="https://placehold.co/40x40" alt="StoryForge AI logo featuring an animated book transforming into a movie reel" class="h-8 w-8 rounded-full">
+                        <span class="ml-2 text-xl font-bold text-gray-900">StoryForge AI</span>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="#features" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indigo-600">Features</a>
+                    <a href="#demo" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indigo-600">Demo</a>
+                    <a href="#how-it-works" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indigo-600">How It Works</a>
+                    <button class="ml-4 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white gradient-bg hover:opacity-90 focus:outline-none">
+                        Sign Up Free
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Transform Any Document into Animated Stories</h1>
+                    <p class="text-xl mb-8 opacity-90">Our AI instantly converts reports, articles, and documents into engaging character-driven videos in any language.</p>
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
+                        <button class="px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg hover:bg-gray-100 transition-colors">Try Free Demo</button>
+                        <button class="px-6 py-3 border border-white text-white font-medium rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">Watch Sample</button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-white rounded-2xl opacity-20 blur-lg"></div>
+                        <div class="relative bg-white rounded-2xl overflow-hidden shadow-xl w-full max-w-md">
+                            <div class="bg-gray-800 p-3 flex items-center">
+                                <div class="flex space-x-2">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                </div>
+                            </div>
+                            <img src="https://placehold.co/800x500" alt="Example AI-generated story frame showing animated characters dramatizing a business report presentation" class="w-full">
+                            <div class="p-4 bg-gray-50">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-sm text-gray-500">Processing document...</p>
+                                        <div class="w-full bg-gray-200 rounded-full h-2">
+                                            <div class="gradient-bg h-2 rounded-full w-3/4"></div>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm font-medium text-indigo-600">74%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- File Upload Section -->
+    <div id="demo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Try Our Free Demo</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Upload any document and see how our AI transforms it into a story (PDF, DOCX, TXT, PPTX supported)</p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/2 p-8">
+                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-indigo-400 transition-colors">
+                        <div class="flex justify-center mb-4">
+                            <img src="https://placehold.co/80x80" alt="Document upload icon with arrow pointing upward into cloud storage" class="h-20 w-20">
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">Upload Your Document</h3>
+                        <p class="text-gray-500 mb-4">Drag & drop files here or click to browse</p>
+                        <button class="px-4 py-2 gradient-bg text-white rounded-lg">Select Files</button>
+                        <p class="text-xs text-gray-400 mt-3">Files are processed securely and never stored</p>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Customize Your Story</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Story Style</label>
+                                <select class="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                    <option>Animated Characters</option>
+                                    <option>Whiteboard Animation</option>
+                                    <option>Cinematic</option>
+                                    <option>Cartoon Style</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Language</label>
+                                <select class="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                    <option>English</option>
+                                    <option>Spanish</option>
+                                    <option>French</option>
+                                    <option>German</option>
+                                    <option>Japanese</option>
+                                    <option>Chinese</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Target Length</label>
+                                <select class="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                    <option>Short (30-60 sec)</option>
+                                    <option>Medium (1-2 min)</option>
+                                    <option>Long (2-5 min)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 px-4 py-3 gradient-
